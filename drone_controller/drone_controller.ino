@@ -1,15 +1,40 @@
-/*
- Name:		drone_controller.ino
- Created:	1/26/2019 9:35:18 PM
- Author:	LEEVII
-*/
+#include "escct.h"
+#include "timer_main.h"
 
-// the setup function runs once when you press reset or power the board
+escct escct_o;
+
+timer_main _timer_m;
+
 void setup() {
-
+	pinMode(LED_BUILTIN, OUTPUT);
+	digitalWrite(LED_BUILTIN, LOW);
+	delay(10000);
 }
 
-// the loop function runs over and over again until power down or reset
+
 void loop() {
-  
+	_timer_m.turn_begin();
+	escct_o.start_motors();
+	digitalWrite(LED_BUILTIN, HIGH);
+	_timer_m.turn_end();
+	delay(2000);
+
+	_timer_m.turn_begin();
+	digitalWrite(LED_BUILTIN, LOW);
+	escct_o.set_throttle(400, 400, 400, 400);
+	_timer_m.turn_end();
+	delay(2000);
+
+	_timer_m.turn_begin();
+	digitalWrite(LED_BUILTIN, LOW);
+	escct_o.set_throttle(800, 800, 800, 800);
+	_timer_m.turn_end();
+	delay(2000);
+
+
+
+	escct_o.stop_motors();
+	digitalWrite(LED_BUILTIN, LOW);
+	delay(5000);
+
 }

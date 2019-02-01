@@ -21,5 +21,28 @@
     <ClInclude Include="__vm\.drone_controller.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="escct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timer_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timer_sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="escct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="timer_sub.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="timer_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

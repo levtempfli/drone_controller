@@ -136,4 +136,10 @@ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\D
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/USBAPI.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Stream.h \
- c:\program\ files\ (x86)\microsoft\ visual\ studio\2017\community\common7\ide\extensions\rklz3tds.z1r\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h
+ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\escct.h \
+ C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/Servo.h \
+ C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/sam/ServoTimers.h \
+ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\config.h \
+ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\timer_sub.h \
+ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\timer_main.h \
+ c:\program\ files\ (x86)\microsoft\ visual\ studio\2017\community\common7\ide\extensions\sivbitce.zrh\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h
