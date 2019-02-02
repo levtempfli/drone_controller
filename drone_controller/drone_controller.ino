@@ -1,9 +1,11 @@
 #include "escct.h"
 #include "timer_main.h"
+#include "I2C_manager.h"
 
 escct escct_o;
 
 timer_main _timer_m;
+i2c_manager _i2c_mng;
 
 void setup() {
 	pinMode(LED_BUILTIN, OUTPUT);
@@ -13,6 +15,8 @@ void setup() {
 
 
 void loop() {
+	_i2c_mng.i2c_init();
+
 	_timer_m.turn_begin();
 	escct_o.start_motors();
 	digitalWrite(LED_BUILTIN, HIGH);

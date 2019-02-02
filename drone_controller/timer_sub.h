@@ -14,9 +14,9 @@ public:
 	void begin();
 	bool warning();
 	void end();
-	void set_new_timestamp(int i);
-	uint64_t get_timestamp(int i);
-	uint64_t get_time_since_timestamp(int i);
+	void set_new_timestamp(uint8_t i);
+	uint64_t get_timestamp(uint8_t i);
+	uint64_t get_time_since_timestamp(uint8_t i);
 private:
 	uint64_t c_begin_time;
 	uint64_t c_end_time;

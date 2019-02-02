@@ -37,15 +37,15 @@ bool timer_sub::warning() {
 	return 0;
 }
 
-void timer_sub::set_new_timestamp(int i) {
+void timer_sub::set_new_timestamp(uint8_t i) {
 	timestamps[i] = _timer_m.get_total_time();
 }
 
-uint64_t timer_sub::get_timestamp(int i) {
+uint64_t timer_sub::get_timestamp(uint8_t i) {
 	return timestamps[i];
 }
 
-uint64_t timer_sub::get_time_since_timestamp(int i) {
+uint64_t timer_sub::get_time_since_timestamp(uint8_t i) {
 	return _timer_m.get_total_time() - timestamps[i];
 }
 
@@ -55,7 +55,7 @@ timer_sub::timer_sub(uint64_t cbt, uint64_t cet, bool cbb, bool ceb, uint64_t cw
 	c_begin_block = cbb;
 	c_end_block = ceb;
 	c_warning_time = cwt;
-	for (int i = 0; i <= TIMER_SUB_TS_ARRAYLENGTH; i++) {
+	for (uint8_t i = 0; i <= TIMER_SUB_TS_ARRAYLENGTH; i++) {
 		timestamps[i] = 0;
 	}
 }

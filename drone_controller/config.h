@@ -21,6 +21,10 @@ constexpr bool TIMER_MAIN_ENDBLOCK = 1;
 constexpr uint64_t TIMER_MAIN_TURNTOTAL = 5000;
 constexpr uint8_t TIMER_SUB_TS_ARRAYLENGTH = 5;
 
+//I2C manager - i2c_manager
+constexpr bool I2C_MANAGER_RELEASEBUS = 0;
+constexpr uint8_t I2C_MANAGER_MAXDATALENGTH = 15;
+constexpr uint32_t I2C_MANAGER_CLOCK = 400000;
 
 
 
