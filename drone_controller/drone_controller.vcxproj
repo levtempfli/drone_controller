@@ -114,6 +114,7 @@
   <ItemGroup>
     <ClInclude Include="config.h" />
     <ClInclude Include="escct.h" />
+    <ClInclude Include="I2C1_manager.h" />
     <ClInclude Include="I2C_manager.h" />
     <ClInclude Include="timer_main.h" />
     <ClInclude Include="timer_sub.h" />
@@ -121,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="escct.cpp" />
+    <ClCompile Include="I2C1_manager.cpp" />
     <ClCompile Include="I2C_manager.cpp" />
     <ClCompile Include="timer_main.cpp" />
     <ClCompile Include="timer_sub.cpp" />

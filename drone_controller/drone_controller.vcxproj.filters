@@ -36,6 +36,9 @@
     <ClInclude Include="I2C_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="I2C1_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="escct.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="I2C_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="I2C1_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

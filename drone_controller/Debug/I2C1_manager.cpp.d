@@ -1,11 +1,9 @@
-C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\drone_controller.cpp.o: \
- C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\drone_controller.cpp \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/arduino.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/avr/pgmspace.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/avr/interrupt.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/binary.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/itoa.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/chip.h \
+C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\I2C1_manager.cpp.o: \
+ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\I2C1_manager.cpp \
+ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\I2C1_manager.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries\Wire\src/Wire.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/twi.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../chip.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/CMSIS/Device/ATMEL/sam.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/CMSIS/Device/ATMEL/sam3.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/CMSIS/Device/ATMEL/sam3xa/include/sam3xa.h \
@@ -81,49 +79,50 @@ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\D
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/CMSIS/Device/ATMEL/sam3xa/include/instance/instance_rtc.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/CMSIS/Device/ATMEL/sam3xa/include/instance/instance_gpbr.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/CMSIS/Device/ATMEL/sam3xa/include/pio/pio_sam3x8e.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/adc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../chip.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/dacc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/interrupt_sam_nvic.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/efc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/gpbr.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/pio.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/pmc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/pwmc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/rstc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/rtc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/rtt.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/spi.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/ssc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/tc.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/twi.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/usart.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/wdt.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/timetick.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/USB_device.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/USB_host.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/can.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/emac.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/trng.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/uotghs_device.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/uotghs_host.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/adc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/../chip.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/dacc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/interrupt_sam_nvic.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/efc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/gpbr.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/pio.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/pmc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/pwmc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/rstc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/rtc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/rtt.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/spi.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/ssc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/tc.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/twi.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/usart.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/wdt.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/timetick.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/USB_device.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/USB_host.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/can.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/emac.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/trng.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/uotghs_device.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/../include/uotghs_host.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Stream.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Print.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/WString.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/avr/pgmspace.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Printable.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/variant.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Arduino.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/avr/interrupt.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/binary.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/itoa.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/chip.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/wiring_constants.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/WCharacter.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/WString.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Tone.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/WMath.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/HardwareSerial.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Stream.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Print.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Printable.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/wiring_pulse.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/variant.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Arduino.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/UARTClass.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USARTClass.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/UARTClass.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/syscalls.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/wiring.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/wiring_digital.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/wiring_analog.h \
@@ -135,15 +134,9 @@ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\D
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/USBCore.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/USBAPI.h \
  C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Stream.h \
- C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\escct.h \
- C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/Servo.h \
- C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/sam/ServoTimers.h \
- C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\config.h \
- C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\timer_sub.h \
- C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\timer_main.h \
- C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\I2C_manager.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries\Wire\src/Wire.h \
- C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\system/libsam/include/twi.h \
- C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\I2C1_manager.h \
- c:\program\ files\ (x86)\microsoft\ visual\ studio\2017\community\common7\ide\extensions\sivbitce.zrh\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/UARTClass.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USARTClass.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/UARTClass.h \
+ C:\Users\LEEVII\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/syscalls.h \
+ C:\Users\LEEVII\AppData\Local\Temp\VMBuilds\drone_controller\arduino_due_x_dbg\Debug\config.h
