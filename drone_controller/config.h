@@ -26,6 +26,11 @@ constexpr bool I2C_MANAGER_RELEASEBUS = 0;
 constexpr uint8_t I2C_MANAGER_MAXDATALENGTH = 15;
 constexpr uint32_t I2C_MANAGER_CLOCK = 400000;
 
+//I2C1 manager - i2c1_manager
+constexpr bool I2C1_MANAGER_RELEASEBUS = 0;
+constexpr uint8_t I2C1_MANAGER_MAXDATALENGTH = 15;
+constexpr uint32_t I2C1_MANAGER_CLOCK = 400000;
+
 
 
 #endif // !CONFIG_H
