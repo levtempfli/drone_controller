@@ -31,7 +31,30 @@ constexpr bool I2C1_MANAGER_RELEASEBUS = 0;
 constexpr uint8_t I2C1_MANAGER_MAXDATALENGTH = 15;
 constexpr uint32_t I2C1_MANAGER_CLOCK = 400000;
 
+//IMU - imu
+constexpr uint8_t IMU_I2C_ADDRESS = 0x68;
+constexpr uint8_t IMU_WHO_AM_I = 0x75;
+constexpr uint8_t IMU_CONFIG_N = 5;
+constexpr uint8_t IMU_CONFIG_REGADR[IMU_CONFIG_N] = { 0x19, 0x1A, 0x1B, 0x1C, 0x6B };
+constexpr uint8_t IMU_CONFIG_REGVAL[IMU_CONFIG_N] = { 0x07, 0x00, 0x00 ,0x00 ,0x01 };
+constexpr double IMU_DEFGOFFSET_X= -127.28;
+constexpr double IMU_DEFGOFFSET_Y= -112.68;
+constexpr double IMU_DEFGOFFSET_Z= -19.95;
+constexpr bool IMU_INIT_OFFSETCALC = 1;
+constexpr uint16_t IMU_INIT_OFFSET_SAMPLE_N = 2000;
+constexpr uint8_t IMU_GYRO_SENSITIVITY_SCALE = 131;
+constexpr double IMU_COMPL_FILTER_ALFA = 0.93;
+constexpr double IMU_COMPL_FILTER_1MALFA = 0.07;
+constexpr uint64_t IMU_TIMER_BEGINTIME = 3000;
+constexpr uint64_t IMU_TIMER_ENDTIME = 4000;
+constexpr bool IMU_TIMER_BEGINBLOCK = 1;
+constexpr bool IMU_TIMER_ENDBLOCK = 1;
+constexpr uint64_t IMU_TIMER_WARNINGTIME = 3700;
 
+
+//Debug messages
+constexpr char DBG_IMU_INIT_ERROR[] = "IMU - INIT - Error at communication with the sensor";
+constexpr char DBG_IMU_OFFSCAL_RESULT[] = "IMU - INIT - New gyro calculated offsets(XYZ):";
 
 #endif // !CONFIG_H
 
