@@ -1,11 +1,15 @@
 #include "ESCCT.h"
 
-escct::escct(){
+escct::escct() {
 	esc1.attach(ESCCT_ESC1PIN);
 	esc2.attach(ESCCT_ESC2PIN);
 	esc3.attach(ESCCT_ESC3PIN);
 	esc4.attach(ESCCT_ESC4PIN);
 	stop_motors();
+}
+
+void escct::init() {
+	delayMicroseconds(ESCCT_INIT_WAIT_TIME);
 }
 
 void escct::start_motors(){

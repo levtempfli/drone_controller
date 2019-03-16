@@ -1,6 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 #include <stdint.h>
+#include <Arduino.h>
 
 //ESC Controller - escct
 constexpr uint16_t ESCCT_MINTHROTTLE = 100;
@@ -9,9 +10,10 @@ constexpr uint8_t ESCCT_ESC1PIN = 2;
 constexpr uint8_t ESCCT_ESC2PIN = 3;
 constexpr uint8_t ESCCT_ESC3PIN = 4;
 constexpr uint8_t ESCCT_ESC4PIN = 5;
+constexpr uint32_t ESCCT_INIT_WAIT_TIME = 5000000;
 
-constexpr uint64_t ESCCT_TIMER_BEGINTIME = 4250;
-constexpr uint64_t ESCCT_TIMER_ENDTIME = 4300;
+constexpr uint64_t ESCCT_TIMER_BEGINTIME = 4120;
+constexpr uint64_t ESCCT_TIMER_ENDTIME = 4200;
 constexpr bool ESCCT_TIMER_BEGINBLOCK = 1;
 constexpr bool ESCCT_TIMER_ENDBLOCK = 1;
 constexpr uint64_t ESCCT_TIMER_WARNINGTIME = 4300;
@@ -50,6 +52,27 @@ constexpr uint64_t IMU_TIMER_ENDTIME = 4000;
 constexpr bool IMU_TIMER_BEGINBLOCK = 1;
 constexpr bool IMU_TIMER_ENDBLOCK = 1;
 constexpr uint64_t IMU_TIMER_WARNINGTIME = 3700;
+
+
+//Battery monitor - battery_monitor
+constexpr uint64_t BTM_TIMER_BEGINTIME = 4000;
+constexpr uint64_t BTM_TIMER_ENDTIME = 4100;
+constexpr bool BTM_TIMER_BEGINBLOCK = 1;
+constexpr bool BTM_TIMER_ENDBLOCK = 1;
+constexpr uint64_t BTM_TIMER_WARNINGTIME = 4050;
+constexpr double BTM_VLT_CONV_VAL = 10.210;
+constexpr double BTM_CUR_CONV_VAL = 27.3322;
+constexpr double BTM_VLT_COMPL_FILTER_ALFA = 0.95;
+constexpr double BTM_VLT_COMPL_FILTER_1MALFA = 0.05;
+constexpr double BTM_CUR_COMPL_FILTER_ALFA = 0.95;
+constexpr double BTM_CUR_COMPL_FILTER_1MALFA = 0.05;
+constexpr uint8_t BTM_VLT_SENSOR_PIN = A3;
+constexpr uint8_t BTM_CUR_SENSOR_PIN = A2;
+constexpr double BTM_COMP_REF_VLT = 12.40;
+constexpr double BTM_COMP_VAL = 40;
+constexpr double BTM_BAT_100PER_VLT = 12.60;
+constexpr double BTM_BAT_0PER_VLT = 10.50;
+constexpr uint16_t BTM_BAT_MAH = 10000;
 
 
 //Debug messages

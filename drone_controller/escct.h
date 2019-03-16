@@ -9,9 +9,10 @@
 class escct {
 public:
 	void set_throttle(int32_t t1, int32_t  t2, int32_t  t3, int32_t  t4);
-	escct();
 	void start_motors();
 	void stop_motors();
+	void init();
+	escct();
 private:
 	Servo esc1, esc2, esc3, esc4;
 	bool started;

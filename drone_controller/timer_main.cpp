@@ -32,10 +32,22 @@ uint64_t timer_main::get_main_errors() {
 	return main_errors;
 }
 
-uint64_t timer_main::get_sub_errors() {
-	return sub_errors;
+uint64_t timer_main::get_sub_begin_errors() {
+	return sub_begin_errors;
 }
 
-void timer_main::add_sub_errors(uint64_t dt){
-	sub_errors += dt;
+uint64_t timer_main::get_sub_end_errors() {
+	return sub_end_errors;
+}
+
+uint64_t timer_main::get_sub_errors() {
+	return sub_begin_errors + sub_end_errors;
+}
+
+void timer_main::add_sub_begin_errors(uint64_t dt){
+	sub_begin_errors += dt;
+}
+
+void timer_main::add_sub_end_errors(uint64_t dt) {
+	sub_end_errors += dt;
 }

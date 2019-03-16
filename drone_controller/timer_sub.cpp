@@ -3,7 +3,7 @@
 void timer_sub::begin() {
 	uint64_t turn_elapsed = _timer_m.get_turn_time();
 	if (turn_elapsed > c_begin_time) {
-		_timer_m.add_sub_errors(turn_elapsed - c_begin_time);
+		_timer_m.add_sub_begin_errors(turn_elapsed - c_begin_time);
 		return;
 	}
 	if (c_begin_block == 1) {
@@ -18,7 +18,7 @@ void timer_sub::begin() {
 void timer_sub::end() {
 	uint64_t turn_elapsed = _timer_m.get_turn_time();
 	if (turn_elapsed > c_end_time) {
-		_timer_m.add_sub_errors(turn_elapsed - c_end_time);
+		_timer_m.add_sub_end_errors(turn_elapsed - c_end_time);
 		return;
 	}
 	if (c_end_block == 1) {
