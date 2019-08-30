@@ -179,6 +179,21 @@ constexpr bool BARO_TIMER_BEGINBLOCK = 1;
 constexpr bool BARO_TIMER_ENDBLOCK = 1;
 constexpr uint64_t BARO_TIMER_WARNINGTIME = 4450;
 
+//Communication with the RPI
+constexpr uint64_t COM_SERIAL2_BAUD_RATE = 9600;
+
+//Debug
+constexpr uint64_t DBG_SERIAL0_BAUD_RATE = 250000;
+constexpr uint64_t DBG_SERIAL2_BAUD_RATE = COM_SERIAL2_BAUD_RATE;
+constexpr uint64_t DBG_OUT_FATAL_LOOP_WAIT = 100000;
+constexpr uint32_t DBG_OUT_BUFFER_LENGTH = 2000;
+constexpr int8_t DBG_OUT_MAX_PRECISION = 8;
+constexpr int8_t DBG_OUT_DEF_PRECISION = 2;
+constexpr int8_t DBG_OUT_DEF_ROUND_MODE = 2;//1-floor, 2-round
+constexpr uint32_t DBG_IN_BUFFER_LENGTH = 2000;
+constexpr uint64_t DBG_IN_PARSE_WAITIME = 300;
+constexpr uint64_t DBG_IN_READ_SERIAL_BYTE_DELAY = 150;//12/250000*1000000=48*3~150
+
 //Debug messages
 constexpr char DBG_IMU_ACGY_INIT_ERROR[] = "IMU - INIT - Error at communication with the accelerometer & gyroscope";
 constexpr char DBG_IMU_MAGN_INIT_ERROR[] = "IMU - INIT - Error at communication with the magnetometer";
