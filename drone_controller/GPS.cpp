@@ -1,13 +1,12 @@
 #include "GPS.h"
 
 void GPS::init() {
-	delayMicroseconds(GPS_INIT_DELAY);
 
-	Serial1.begin(GPS_ST_SERIAL_BAUD);
+	Serial1.begin(GPS_ST_SERIAL1_BAUD);
 	Serial1.write(GPS_CFG_SET_BAUD, GPS_CFG_SB_MSGL);
 	delayMicroseconds(GPS_CFG_DELAY);
 	Serial1.end();
-	Serial1.begin(GPS_SERIAL_BAUD);
+	Serial1.begin(GPS_SERIAL1_BAUD);
 
 	Serial1.write(GPS_CFG_ENABLE_GNS, GPS_CFG_DENMEA_MSGL); delayMicroseconds(GPS_CFG_DELAY);
 	Serial1.write(GPS_CFG_ENABLE_GSA, GPS_CFG_DENMEA_MSGL); delayMicroseconds(GPS_CFG_DELAY);
@@ -38,7 +37,7 @@ void GPS::init() {
 }
 
 void GPS::field_skip() {
-	while (buffer[res_i] != ',') {
+	while (buffer[res_i] != ',' && buffer[res_i] != '*') {
 		res_i++;
 	}
 	res_i++;
@@ -46,7 +45,7 @@ void GPS::field_skip() {
 
 uint16_t GPS::field_get_uint16() {
 	uint16_t num = 0;
-	while (buffer[res_i] != ',') {
+	while (buffer[res_i] != ',' && buffer[res_i] != '*') {
 		num = num * 10 + (buffer[res_i] - 48);
 		res_i++;
 	}
@@ -61,7 +60,7 @@ double GPS::field_get_double() {
 		neg = 1;
 		res_i++;
 	}
-	while (buffer[res_i] != '.' &&  buffer[res_i] != ',') {
+	while (buffer[res_i] != '.' &&  buffer[res_i] != ',' && buffer[res_i] != '*') {
 		num = num * 10 + (buffer[res_i] - 48);
 		res_i++;
 	}
@@ -72,7 +71,7 @@ double GPS::field_get_double() {
 	}
 	res_i++;
 	int32_t div = 1;
-	while (buffer[res_i] != ',') {
+	while (buffer[res_i] != ',' && buffer[res_i] != '*') {
 		num = num * 10 + (buffer[res_i] - 48);
 		div *= 10;
 		res_i++;

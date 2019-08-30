@@ -99,7 +99,7 @@ constexpr uint64_t BTM_TIMER_WARNINGTIME = 4050;
 
 //GPS - GPS NMEA decoder
 
-constexpr uint16_t GPS_BUFF_SIZE = 100;
+constexpr uint16_t GPS_BUFF_SIZE = 128;
 constexpr uint16_t GPS_CFG_DENMEA_MSGL = 11;
 constexpr uint16_t GPS_CFG_SB_MSGL = 28;
 constexpr uint16_t GPS_CFG_SR_MSGL = 14;
@@ -113,14 +113,13 @@ constexpr uint8_t GPS_CFG_ENABLE_VTG[GPS_CFG_DENMEA_MSGL] = { 0xB5, 0x62, 0x06, 
 constexpr uint8_t GPS_CFG_ENABLE_GNS[GPS_CFG_DENMEA_MSGL] = { 0xB5, 0x62, 0x06, 0x01, 0x03, 0x00, 0xF0, 0x0D, 0x01, 0x08, 0x2A }; //disable GNS messages
 constexpr uint8_t GPS_CFG_ENABLE_GSA[GPS_CFG_DENMEA_MSGL] = { 0xB5, 0x62, 0x06, 0x01, 0x03, 0x00, 0xF0, 0x02, 0x01, 0xFD, 0x14 }; //disable GSA messages
 constexpr uint8_t GPS_CFG_SET_RATE[GPS_CFG_SR_MSGL] = { 0xB5, 0x62, 0x06, 0x08, 0x06, 0x00, 0xC8, 0x00, 0x01, 0x00, 0x01, 0x00, 0xDE, 0x6A }; //set rate to 5hz (200ms)
-constexpr uint64_t GPS_CFG_DELAY = 300000;
-constexpr uint64_t GPS_INIT_DELAY = 3000000;
-constexpr uint32_t GPS_ST_SERIAL_BAUD = 9600;
-constexpr uint32_t GPS_SERIAL_BAUD = 460800;
+constexpr uint64_t GPS_CFG_DELAY = 200000;
+constexpr uint32_t GPS_ST_SERIAL1_BAUD = 9600;
+constexpr uint32_t GPS_SERIAL1_BAUD = 460800;
 constexpr uint64_t GPS_TIMEOUT = 400000;
 
-constexpr uint64_t GPS_TIMER_BEGINTIME = 1900;
-constexpr uint64_t GPS_TIMER_ENDTIME = 2350;
+constexpr uint64_t GPS_TIMER_BEGINTIME = 2000;
+constexpr uint64_t GPS_TIMER_ENDTIME = 2550;
 constexpr bool GPS_TIMER_BEGINBLOCK = 1;
 constexpr bool GPS_TIMER_ENDBLOCK = 1;
 constexpr uint64_t GPS_TIMER_WARNINGTIME = 2275;
