@@ -10,10 +10,9 @@ constexpr uint8_t ESCCT_ESC1PIN = 5;
 constexpr uint8_t ESCCT_ESC2PIN = 2;
 constexpr uint8_t ESCCT_ESC3PIN = 3;
 constexpr uint8_t ESCCT_ESC4PIN = 4;
-constexpr uint32_t ESCCT_INIT_WAIT_TIME = 5000000;
 
-constexpr uint64_t ESCCT_TIMER_BEGINTIME = 4120;
-constexpr uint64_t ESCCT_TIMER_ENDTIME = 4200;
+constexpr uint64_t ESCCT_TIMER_BEGINTIME = 3700;
+constexpr uint64_t ESCCT_TIMER_ENDTIME = 3720;
 constexpr bool ESCCT_TIMER_BEGINBLOCK = 1;
 constexpr bool ESCCT_TIMER_ENDBLOCK = 1;
 constexpr uint64_t ESCCT_TIMER_WARNINGTIME = 4300;

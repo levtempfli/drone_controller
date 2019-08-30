@@ -8,10 +8,6 @@ escct::escct() {
 	stop_motors();
 }
 
-void escct::init() {
-	delayMicroseconds(ESCCT_INIT_WAIT_TIME);
-}
-
 void escct::start_motors(){
 	started = true;
 	esc1.writeMicroseconds(1000 + ESCCT_MINTHROTTLE);
