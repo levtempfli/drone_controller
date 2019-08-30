@@ -25,7 +25,6 @@ public:
 private:
 	void calc_acc();
 	void calc_gyro();
-	void calc_temp();
 	void calc_compl();
 	void read_raw_datas();
 	timer_sub timer_s = timer_sub(IMU_TIMER_BEGINTIME, IMU_TIMER_ENDTIME, IMU_TIMER_BEGINBLOCK, IMU_TIMER_ENDBLOCK, IMU_TIMER_WARNINGTIME);

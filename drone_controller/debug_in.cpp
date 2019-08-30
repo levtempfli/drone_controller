@@ -132,7 +132,7 @@ debug_in& debug_in::operator>>(double &i) {
 		if (read_char < '0' || read_char > '9') return *this;
 	}
 	else return *this;
-	int temp = 10;
+	uint64_t temp = 10;
 	double temp2= read_char - '0';
 	temp2 = (double)temp2 / (double)temp;
 	if (negative) i -= temp2;

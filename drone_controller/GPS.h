@@ -35,9 +35,9 @@ private:
 	uint8_t numSV;//11
 	char NS, EW;//N, E
 
-	int8_t byte_rec;
+	char byte_rec;
 	uint8_t in_status;//0-wait for $; 1-wair for data; 2-wait for checksum1; 3-wait for checksum2
-	int8_t buffer[GPS_BUFF_SIZE];
+	char buffer[GPS_BUFF_SIZE];
 	uint8_t buff_i;
 	uint8_t res_i;
 	int8_t chsu, chs1, chs2;

@@ -6,9 +6,9 @@ void battery_monitor::update() {
 
 	voltage = analogRead(BTM_VLT_SENSOR_PIN);
 	current = analogRead(BTM_CUR_SENSOR_PIN);
-	voltage /= 310;
+	voltage = voltage * BTM_SENSOR_VOLTAGE / BTM_SENSOR_RESOLUTION;
 	voltage *= BTM_VLT_CONV_VAL;
-	current /= 310;
+	current = current * BTM_SENSOR_VOLTAGE / BTM_SENSOR_RESOLUTION;
 	current *= BTM_CUR_CONV_VAL;
 	voltage_avg = voltage_avg * BTM_VLT_COMPL_FILTER_ALFA + voltage * BTM_VLT_COMPL_FILTER_1MALFA;
 	current_avg = current_avg * BTM_CUR_COMPL_FILTER_ALFA + current * BTM_CUR_COMPL_FILTER_1MALFA;
@@ -39,9 +39,9 @@ int32_t battery_monitor::get_motor_correction() {
 void battery_monitor::init() {
 	voltage = analogRead(BTM_VLT_SENSOR_PIN);
 	current = analogRead(BTM_CUR_SENSOR_PIN);
-	voltage /= 310;
+	voltage = voltage * BTM_SENSOR_VOLTAGE / BTM_SENSOR_RESOLUTION;
 	voltage *= BTM_VLT_CONV_VAL;
-	current /= 310;
+	current = current * BTM_SENSOR_VOLTAGE / BTM_SENSOR_RESOLUTION;
 	current *= BTM_CUR_CONV_VAL;
 	voltage_avg = voltage;
 	current_avg = current;

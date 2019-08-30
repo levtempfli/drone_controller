@@ -4,6 +4,7 @@
 #include <Arduino.h>
 
 //ESC Controller - escct
+constexpr uint16_t ESCCT_MINSIGNAL = 1000;
 constexpr uint16_t ESCCT_MINTHROTTLE = 100;
 constexpr uint16_t ESCCT_MAXTHROTTLE = 900;
 constexpr uint8_t ESCCT_ESC1PIN = 5;
@@ -77,6 +78,8 @@ constexpr uint64_t IMU_TIMER_WARNINGTIME = 3700;
 
 
 //Battery monitor - battery_monitor
+constexpr double BTM_SENSOR_VOLTAGE = 3.3;
+constexpr double BTM_SENSOR_RESOLUTION = 1024;
 constexpr double BTM_VLT_CONV_VAL = 10.210;
 constexpr double BTM_CUR_CONV_VAL = 27.3322;
 constexpr double BTM_VLT_COMPL_FILTER_ALFA = 0.95;

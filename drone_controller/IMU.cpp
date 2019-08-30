@@ -96,7 +96,6 @@ void imu::update(){
 	
 	calc_acc();
 	calc_gyro();
-	calc_temp();
 	calc_compl();
 	calc_magn();
 	yaw_fusion();
@@ -144,10 +143,6 @@ void imu::calc_gyro(){
 	/*if (abs(compAngleX) > 90)
 		  gyroYrate = -gyroYrate; // Invert rate, so it fits the restriced accelerometer reading
 	*/
-}
-
-void imu::calc_temp() {
-	temp = temp_raw / 340.0 + 36.53;
 }
 
 void imu::calc_compl() {
