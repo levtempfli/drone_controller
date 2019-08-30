@@ -4,8 +4,12 @@
 #include <stdint.h>
 #include "timer_sub.h"
 #include "I2C1_manager.h"
+#include "debug_in.h"
+#include "debug_out.h"
 
 extern i2c1_manager _i2c1_mng;
+extern debug_in din;
+extern debug_out dout;
 
 class baro {
 public:

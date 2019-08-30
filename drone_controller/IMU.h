@@ -5,9 +5,13 @@
 #include "I2C1_manager.h"
 #include "I2C_manager.h"
 #include "timer_sub.h"
+#include "debug_in.h"
+#include "debug_out.h"
 
 extern i2c1_manager _i2c1_mng;
 extern i2c_manager _i2c_mng;
+extern debug_out dout;
+extern debug_in din;
 
 class imu {
 public:
@@ -33,7 +37,6 @@ private:
 	double angle_x, angle_y, angle_z;
 	double angle_x_dam, angle_y_dam;
 	double acc_x, acc_y, temp;
-public:
 	int16_t mag_raw_x, mag_raw_y, mag_raw_z;
 	double mag_corr_x, mag_corr_y, mag_corr_z, mag_real_x, mag_real_y;
 	double compass_heading;

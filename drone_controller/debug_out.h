@@ -1,6 +1,7 @@
 #ifndef DEBUG_OUT
 #define DEBUG_OUT
 #include "config.h"
+#include <Arduino.h>
 
 class debug_out {
 public:

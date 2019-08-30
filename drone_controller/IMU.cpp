@@ -12,11 +12,7 @@ void imu::init() {
 	identification_value = (identification_value << 8) | _i2c_mng.i2cData[1];
 	identification_value = (identification_value << 8) | _i2c_mng.i2cData[2];
 	if (identification_value != IMU_MAGN_IDEN_VAL) {
-		while (1) {
-			delay(500);
-			//TODO:DEBUG CLASS
-			Serial.println(DBG_IMU_MAGN_INIT_ERROR);
-		}
+		dout.fatal_error(DBG_IMU_MAGN_INIT_ERROR);
 	}
 
 	for (uint8_t i = 0; i < IMU_ACGY_CONFIG_N; i++) {
@@ -26,11 +22,7 @@ void imu::init() {
 
 	_i2c1_mng.i2cRead(IMU_ACGY_WHO_AM_I, 1, IMU_ACGY_I2C_ADDRESS);
 	if (_i2c1_mng.i2cData[0] != IMU_ACGY_I2C_ADDRESS) { // Read "WHO_AM_I" register
-		while (1) {
-			delay(500);
-			//TODO:DEBUG CLASS
-			Serial.println(DBG_IMU_ACGY_INIT_ERROR);
-		}
+		dout.fatal_error(DBG_IMU_ACGY_INIT_ERROR);
 	}
 	delayMicroseconds(IMU_INIT_DELAY_SHORT);
 	if (IMU_GYRO_INIT_OFFSETCALC == 0) {

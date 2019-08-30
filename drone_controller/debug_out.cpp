@@ -111,6 +111,7 @@ debug_out& debug_out::operator<<(double i) {
 				break;
 			case 2:
 				tmp2 = (uint64_t)(tmp2 + 0.5f);
+				if (tmp2 > 9) tmp2 = 9;
 				break;
 			}
 			
@@ -150,7 +151,6 @@ void debug_out::set_round_mode(int8_t m){
 
 void debug_out::fatal_error(String s) {
 	Serial2.begin(DBG_SERIAL2_BAUD_RATE);
-	Serial.print("abcdefgh");
 	String s2 = "";
 	s2.concat("@DBG#");
 	s2.concat(s);

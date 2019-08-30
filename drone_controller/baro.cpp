@@ -7,11 +7,7 @@ void baro::init() {
 	_i2c1_mng.i2cRead(BARO_CHIPID_REG, 1, BARO_I2C_ADDR);
 
 	if (_i2c1_mng.i2cData[0] != BARO_CHIPID_VAL) {
-		while (1) {
-			//TODO
-			Serial.println(DBG_BARO_INIT_ERROR);
-			delay(500);
-		}
+		dout.fatal_error(DBG_BARO_INIT_ERROR);
 	}
 
 	_i2c1_mng.i2cRead(BARO_CAL_AC1, 2, BARO_I2C_ADDR);

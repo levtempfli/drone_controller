@@ -1,6 +1,7 @@
 #ifndef DEBUG_IN
 #define DEBUG_IN
 #include "config.h"
+#include <Arduino.h>
 
 class debug_in {
 public:
