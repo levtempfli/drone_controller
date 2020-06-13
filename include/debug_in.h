@@ -5,10 +5,12 @@
 #undef max
 #include "config.h"
 
-//Debug read class
+// Debug read class
 class debug_in
 {
   public:
+    debug_in(){};
+    debug_in(const debug_in &) = delete;
     // read ints
     debug_in &operator>>(int &i);
     debug_in &operator>>(int8_t &i);

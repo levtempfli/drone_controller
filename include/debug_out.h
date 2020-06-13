@@ -8,6 +8,7 @@
 class debug_out
 {
   public:
+    debug_out(const debug_out &) = delete;
     debug_out(); // Constructor
     // Print ints
     debug_out &operator<<(int i);

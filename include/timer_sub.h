@@ -13,12 +13,14 @@ class timer_sub
 {
   public:
     timer_sub(uint64_t cbt, uint64_t cet, bool cbb, bool ceb, uint64_t cwt,
-              timer_main &tm);               // constructor=begin time, end time, beginblock, endblock, warning time
-    void begin();                            // begin sub-turn
-    bool warning() const;                    // warning check
-    void end();                              // end sub-turn
-    void set_new_timestamp(uint8_t i);       // set timestamp i
-    uint64_t get_timestamp(uint8_t i) const; // get timestamp i
+              timer_main &tm); // constructor=begin time, end time, beginblock, endblock, warning time
+    timer_sub() = delete;
+    timer_sub(const timer_sub &) = delete;
+    void begin();                                       // begin sub-turn
+    bool warning() const;                               // warning check
+    void end();                                         // end sub-turn
+    void set_new_timestamp(uint8_t i);                  // set timestamp i
+    uint64_t get_timestamp(uint8_t i) const;            // get timestamp i
     uint64_t get_time_since_timestamp(uint8_t i) const; // get time elapsed since last timestamp set
   private:
     timer_main &tim_ma;

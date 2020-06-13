@@ -8,6 +8,8 @@
 class timer_main
 {
   public:
+    timer_main(){};
+    timer_main(const timer_main &) = delete;
     void turn_begin();                      // main loop begin measurement
     void turn_end();                        // main loop end measurement
     uint64_t get_turn_time() const;         // get time elapsed from begin
