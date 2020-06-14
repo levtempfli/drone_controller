@@ -4,7 +4,8 @@
 // Constructor
 escct::escct(timer_main &tm)
     : timer_s(CFG::ESC::timer::begin_time, CFG::ESC::timer::end_time, CFG::ESC::timer::begin_block,
-              CFG::ESC::timer::end_block, CFG::ESC::timer::warning_time, tm)
+              CFG::ESC::timer::end_block, CFG::ESC::timer::warning_time, tm),
+      timer_m(tm)
 {
     esc1.attach(CFG::ESC::esc1_pin);
     esc2.attach(CFG::ESC::esc2_pin);

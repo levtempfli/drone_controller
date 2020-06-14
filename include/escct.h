@@ -20,6 +20,7 @@ class escct
     Servo esc1, esc2, esc3, esc4;
     bool started;
     timer_sub timer_s;
+    timer_main &timer_m;
 };
 
 #endif // !ESCCT_H
