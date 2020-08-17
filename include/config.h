@@ -9,6 +9,41 @@
 struct CFG
 {
     static const uint64_t pre_init_delay = 1500000;
+    struct GPS
+    {
+        static const uint16_t buffer_size = 128;
+        static const uint32_t def_serial1_baud = 9600;
+        static const uint32_t set_serial1_baud = 460800;
+        static const uint64_t timeout = 400000;
+
+        struct settings
+        {
+            static const uint64_t delay = 200000;
+            static const uint16_t set_baud_msg_len = 28;
+            static const uint8_t set_baud_msg[];
+            static const uint16_t denmea_msg_len = 11;
+            static const uint8_t disable_GGA[];
+            static const uint8_t disable_GLL[];
+            static const uint8_t disable_GSV[];
+            static const uint8_t disable_TXT[];
+            static const uint8_t disable_RMC[];
+            static const uint8_t enable_VTG[];
+            static const uint8_t enable_GNS[];
+            static const uint8_t enable_GSA[];
+            static const uint16_t set_rate_msg_len = 14;
+            static const uint8_t set_rate_msg[];
+        };
+
+        struct timer
+        {
+            static const uint64_t begin_time = 2000;
+            static const uint64_t end_time = 2550;
+            static const uint64_t warning_time = 2500;
+            static const bool begin_block = 1;
+            static const bool end_block = 0;
+        };
+    };
+
     struct battery_monitor
     {
         static constexpr double sensor_voltage = 3.3;
