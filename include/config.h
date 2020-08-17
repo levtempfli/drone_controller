@@ -8,6 +8,7 @@
 // Configurations
 struct CFG
 {
+    static const uint64_t pre_init_delay = 1500000;
     struct battery_monitor
     {
         static constexpr double sensor_voltage = 3.3;
@@ -36,11 +37,11 @@ struct CFG
 
         struct timer
         {
-            static const uint64_t begin_time = 4000;
-            static const uint64_t end_time = 4100;
+            static const uint64_t begin_time = 4150;
+            static const uint64_t end_time = 4400;
             static const uint64_t warning_time = 0;
             static const bool begin_block = 1;
-            static const bool end_block = 1;
+            static const bool end_block = 0;
         };
     };
 
@@ -104,11 +105,11 @@ struct CFG
         // critical timing configs
         struct timer
         {
-            static const uint64_t begin_time = 2500;
+            static const uint64_t begin_time = 2450;
             static const uint64_t end_time = 3800;
             static const uint64_t warning_time = 0;
             static const bool begin_block = 1;
-            static const bool end_block = 1;
+            static const bool end_block = 0;
         };
 
         // messages, defined in config.cpp
@@ -148,15 +149,19 @@ struct CFG
         static const uint8_t esc2_pin = 2; // rear-right
         static const uint8_t esc3_pin = 3; // rear-left
         static const uint8_t esc4_pin = 4; // front-left
+        static constexpr double lin_reg_theta1 = -330.102823;
+        static constexpr double lin_reg_theta2 = 0.135228;
+        static constexpr double lin_reg_theta3 = 5.755197;
+        static constexpr double lin_reg_theta4 = -0.005286;
 
         // critical timing configs
         struct timer
         {
-            static const uint64_t begin_time = 3700;
-            static const uint64_t end_time = 3720;
+            static const uint64_t begin_time = 4425;
+            static const uint64_t end_time = 4450;
             static const uint64_t warning_time = 0;
             static const bool begin_block = 1;
-            static const bool end_block = 1;
+            static const bool end_block = 0;
         };
     };
 
@@ -164,7 +169,7 @@ struct CFG
     struct Timer
     {
         static const bool main_endblock = 1;
-        static const uint64_t main_turn_duration = 4000;
+        static const uint64_t main_turn_duration = 4500;
         static const uint8_t sub_timsta_arr_len = 5;
     };
 
@@ -177,7 +182,7 @@ struct CFG
     // Debug in and out configs
     struct Dbg
     {
-        static const uint64_t serial0_baud_rate = 250000;
+        static const uint64_t serial0_baud_rate = 115200;
         static const uint64_t out_fatal_loop_wait = 100000;
         static const uint32_t out_buffer_length = 2000;
         static const int8_t out_max_precision = 8;

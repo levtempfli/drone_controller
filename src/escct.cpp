@@ -76,3 +76,13 @@ void escct::set_throttle(int32_t t1, int32_t t2, int32_t t3, int32_t t4)
     timer_s.end();
     return;
 }
+
+// Set RPM based on voltage
+void escct::set_rpm(double r1, double r2, double r3, double r4, double voltage)
+{
+    r1=CFG::ESC::lin_reg_theta1+r1*CFG::ESC::lin_reg_theta2+voltage*CFG::ESC::lin_reg_theta3+r1*voltage*CFG::ESC::lin_reg_theta4;
+    r2=CFG::ESC::lin_reg_theta1+r2*CFG::ESC::lin_reg_theta2+voltage*CFG::ESC::lin_reg_theta3+r2*voltage*CFG::ESC::lin_reg_theta4;
+    r3=CFG::ESC::lin_reg_theta1+r3*CFG::ESC::lin_reg_theta2+voltage*CFG::ESC::lin_reg_theta3+r3*voltage*CFG::ESC::lin_reg_theta4;
+    r4=CFG::ESC::lin_reg_theta1+r4*CFG::ESC::lin_reg_theta2+voltage*CFG::ESC::lin_reg_theta3+r4*voltage*CFG::ESC::lin_reg_theta4;
+    set_throttle(r1,r2,r3,r4);
+}
