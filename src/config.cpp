@@ -32,3 +32,4 @@ const uint8_t CFG::IMU::magneto::settings_reg_val[CFG::IMU::magneto::settings_n]
 const char CFG::IMU::msg::acgy_init_error[] = "IMU - INIT - Error at communication with the accelerometer & gyroscope";
 const char CFG::IMU::msg::magn_init_error[] = "IMU - INIT - Error at communication with the magnetometer";
 const char CFG::IMU::msg::gyro_offs_cal_result[] = "IMU - INIT - New gyro calculated offsets(XYZ):";
+const char CFG::BMP::baro_init_error[] = "BARO - INIT - Error at communication with the barometer";

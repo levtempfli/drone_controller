@@ -9,6 +9,59 @@
 struct CFG
 {
     static const uint64_t pre_init_delay = 1500000;
+
+    struct BMP
+    {
+        static const uint8_t mode = 3; // ultralowpower-0, standard-1, highres-2, ultrahighres-3
+        static const uint64_t press_meas_duration =
+            26500; // ultralowpower-4500, standard-7500, highres-13500, ultrahighres-25500
+        static const uint64_t temp_meas_duration = 4600;
+        static const int32_t def_sealevel_pressure = 101325;
+        static const uint16_t num_of_avg = 20; // Number of pressure reading datas to average
+        static constexpr double compl_filter_alpha = 0.985;
+        static constexpr double compl_filter_1malpha = 0.015;
+        static const int32_t corr_max_diff = 8;
+        static const int32_t corr_min_diff = 1;
+        static constexpr double corr_adjust_div = 6.0;
+        static constexpr double alt_calc_const1 = 44330;
+        static constexpr double alt_calc_const2 = 0.1903;
+
+        struct i2c
+        {
+            static const uint8_t address = 0x77;
+            static const uint8_t cmd_control_reg = 0xF4;
+            static const uint8_t cmd_readtemp = 0x2E;
+            static const uint8_t cmd_readpress = 0x34;
+            static const uint8_t data_reg = 0xF6;
+            static const uint8_t chipid_reg = 0xD0;
+            static const uint8_t chipid_val = 0x55;
+        };
+
+        struct cal
+        {
+            static const uint8_t ac1 = 0xAA;
+            static const uint8_t ac2 = 0xAC;
+            static const uint8_t ac3 = 0xAE;
+            static const uint8_t ac4 = 0xB0;
+            static const uint8_t ac5 = 0XB2;
+            static const uint8_t ac6 = 0xB4;
+            static const uint8_t b1 = 0xB6;
+            static const uint8_t b2 = 0xB8;
+            static const uint8_t mb = 0xBA;
+            static const uint8_t mc = 0xBC;
+            static const uint8_t md = 0xBE;
+        };
+        struct timer
+        {
+            static const uint64_t begin_time = 4000;
+            static const uint64_t end_time = 4490;
+            static const uint64_t warning_time = 0;
+            static const bool begin_block = 1;
+            static const bool end_block = 0;
+        };
+        static const char baro_init_error[];
+    };
+
     struct GPS
     {
         static const uint16_t buffer_size = 128;
@@ -37,8 +90,8 @@ struct CFG
         struct timer
         {
             static const uint64_t begin_time = 2000;
-            static const uint64_t end_time = 2550;
-            static const uint64_t warning_time = 2500;
+            static const uint64_t end_time = 2525;
+            static const uint64_t warning_time = 2275;
             static const bool begin_block = 1;
             static const bool end_block = 0;
         };
