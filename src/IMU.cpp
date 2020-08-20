@@ -58,8 +58,8 @@ void imu_control::init()
         gyro_offset_x /= CFG::IMU::accgyro::gyro::offset_calc_sample_n;
         gyro_offset_y /= CFG::IMU::accgyro::gyro::offset_calc_sample_n;
         gyro_offset_z /= CFG::IMU::accgyro::gyro::offset_calc_sample_n;
-        // TODO:DEBUG CLASS
-        dout << CFG::IMU::msg::gyro_offs_cal_result << "\t" << gyro_offset_x << "\t" << gyro_offset_y << "\t"
+
+        //dout << CFG::IMU::msg::gyro_offs_cal_result << "\t" << gyro_offset_x << "\t" << gyro_offset_y << "\t"
              << gyro_offset_z << "\n";
     }
 
