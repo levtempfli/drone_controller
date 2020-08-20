@@ -4,20 +4,7 @@
 #include <Arduino.h>
 
 //Sonar
-constexpr uint16_t SONAR_TRIGGER_PIN = 54;
-constexpr uint16_t SONAR_ECHO_PIN = 55;
-constexpr uint64_t SONAR_DELAY_AFTER_CLEAR = 2;
-constexpr uint64_t SONAR_DELAY_AFTER_TRIGGER = 2;
-constexpr uint64_t SONAR_WAIT_FOR_SIGNAL_TIMEOUT = 1500;
-constexpr double SONAR_SOUND_DISTANCE_IN_1MS = 0.0343; //cm/ms
-constexpr double SONAR_MAX_DISTANCE_FROM_GROUND = 20;
-constexpr uint64_t SONAR_DATA_TIMEOUT = 100000;
 
-constexpr uint64_t SONAR_TIMER_BEGINTIME = 1500;
-constexpr uint64_t SONAR_TIMER_ENDTIME = 3250;
-constexpr bool SONAR_TIMER_BEGINBLOCK = 1;
-constexpr bool SONAR_TIMER_ENDBLOCK = 1;
-constexpr uint64_t SONAR_TIMER_WARNINGTIME = 3700;
 
 
 //Serial Raspberry Pi

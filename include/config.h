@@ -10,6 +10,25 @@ struct CFG
 {
     static const uint64_t pre_init_delay = 1500000;
 
+    struct Sonar
+    {
+        static const uint16_t trigger_pin = 54;
+        static const uint16_t echo_pin = 55;
+        static const uint64_t digital_delay = 2;
+        static constexpr double sound_distance_in_1ms = 0.0343; // cm/ms
+        static constexpr double max_distance_from_ground = 20;
+        static const uint64_t data_timeout = 500000;
+
+        struct timer
+        {
+            static const uint64_t begin_time = 1500;
+            static const uint64_t end_time = 2175;
+            static const uint64_t warning_time = 2150;
+            static const bool begin_block = 0;
+            static const bool end_block = 1;
+        };
+    };
+
     struct BMP
     {
         static const uint8_t mode = 3; // ultralowpower-0, standard-1, highres-2, ultrahighres-3
